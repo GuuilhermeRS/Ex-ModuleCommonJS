@@ -1,7 +1,7 @@
 module.exports = {
-  conversion(au) {
-    const auInKm = 149587870
-    let unitInKm = au * auInKm
-    return unitInKm
+  get AU_IN_KM() { return 149587870 },
+
+  convertAUtoKm(au) {
+    return au * this.AU_IN_KM
   }
 }
