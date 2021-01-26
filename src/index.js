@@ -1,5 +1,5 @@
-const Planet = require('./planet')
-const planetOperations = require('./unit_conversion')
+import Planet from "./planet"
+import { convertAUtoKm } from "./unit_conversion"
 
 let planets = [
   new Planet("Mercúrio", 0.39),
@@ -13,6 +13,6 @@ let planets = [
 ]
 
 planets.forEach(planet => {
-  distanceFromSun = planetOperations.convertAUtoKm(planet.auToSum).toFixed(2)
+  let distanceFromSun = convertAUtoKm(planet.auToSum).toFixed(2)
   console.log(`${planet.name} - ${planet.auToSum}AU - ${distanceFromSun}km`)
 })

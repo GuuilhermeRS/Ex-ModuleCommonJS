@@ -1,6 +1,8 @@
-module.exports = class Planet {
+class Planet {
   constructor(name, auToSun) {
     this.name = name
     this.auToSum = auToSun
   }
 }
+
+export default  Planet
